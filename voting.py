@@ -45,10 +45,10 @@ def lakukan_voting():
             break
             
     if calon_ditemukan is None:
-        print("❌ GAGAL: ID Calon yang Anda masukkan tidak valid/tidak ada!")
+        print("GAGAL: ID Calon yang Anda masukkan tidak valid/tidak ada!")
         return 
         
-    print(f"\n👉 Pilihan Anda: [{calon_ditemukan['id']}] - {calon_ditemukan['nama']}")
+    print(f"\nPilihan Anda: [{calon_ditemukan['id']}] - {calon_ditemukan['nama']}")
     konfirmasi = input("Apakah Anda yakin dengan pilihan ini? (Y/N): ").strip().upper()
     if konfirmasi != "Y":
         print("🔄 VOTING DIBATALKAN: Silakan ulangi proses jika ingin mengganti pilihan.")
@@ -61,8 +61,8 @@ def lakukan_voting():
     utils.save_data(FILE_PEMILIH, daftar_pemilih)
     utils.save_data(FILE_CALON, daftar_calon)
     
-    print("\n🔒 SYSTEM NOTE: Log data pemilih dan database suara telah diperbarui secara terpisah.")
-    print(f"✅ BERHASIL: Hak suara '{pemilih_ditemukan['nama']}' sah terekam secara anonim. Terima kasih!")
+    print("\nSYSTEM NOTE: Log data pemilih dan database suara telah diperbarui secara terpisah.")
+    print(f"BERHASIL: Hak suara '{pemilih_ditemukan['nama']}' sah terekam secara anonim. Terima kasih!")
 
 def tampilkan_hasil():
     print("\n=== PEROLEHAN HASIL SUARA SEMENTARA ===")
